@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владимир & Александра - Приглашение на свадьбу</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+        @font-face {
+            font-family: 'Ebbe';
+            src: url('fonts/EbbeThin.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Miama Nueva';
+            src: url('fonts/miamanueva.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap; /* Опционально: для плавной загрузки */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', sans-serif;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Ebbe', serif;
+            font-weight: 100;
+            font-size: 36px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 0 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .logicalBlock {
+            margin-bottom: 109px;
+        }
+
+        .withLeftFlexColumn {
+            display: flex;
+            max-width: 480px;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .margin-bot-20 {
+            margin-bottom: 20px !important;
+        }
+
+        .margin-bot-30 {
+            margin-bottom: 30px !important;
+        }
+
+        .margin-bot-60 {
+            margin-bottom: 60px !important;
+        }
+
+        .names {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Ebbe', serif;
+            font-weight: 100;
+            font-size: 64px;
+            line-height: 100%;
+            letter-spacing: 4%;
+            margin-bottom: 30px;
+        }
+
+        .names span:first-child {
+            transform: translate(-58px);
+        }
+
+        .names span:last-child {
+            transform: translate(30px);
+        }
+
+        .date {
+            font-family: 'Cinzel', serif;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-bottom: 40px;
+        }
+
+        .arrowEl {
+            display: flex;
+            justify-content: center;
+            transform: translate(70px, -20px);
+        }
+
+        .arrowEl div:last-child {
+            font-family: 'Miama Nueva', cursive;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 15px;
+            line-height: 100%;
+            transform: translate(10px, 35px) rotate(-7deg);
+        }
+
+        .plainText {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0%;
+            max-width: 480px;
+            text-align: left;
+        }
+
+        .location-name {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .location-text {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        .photo {
+            margin-bottom: 30px;
+            width: 100%;
+            height: auto;
+        }
+
+        .offset-photos {
+            max-width: 480px;
+            position: relative;
+            margin: 0 auto 40px;
+        }
+
+        .offset-photo {
+            width: 100%;
+            margin: 0 0 20px 0;
+            filter: grayscale(100%);
+        }
+
+        .plainTime {
+            font-family: 'Cinzel', serif;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin: 20px 0 5px;
+        }
+
+        .program {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .program h2 {
+            justify-self: flex-start;
+        }
+
+        .program-items {
+            flex: 1;
+            text-align: right;
+        }
+
+        .program-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .program-item .plainTime {
+            margin: 0;
+        }
+
+        .program-item .plainText {
+            margin: 0 20px;
+        }
+
+        .program-photo {
+            position: absolute;
+            width: 130px;
+            height: 260px;
+            right: 0;
+            top: -80px;
+        }
+
+        .dresscode {
+            width: 100%;
+        }
+
+        .dresscode h2 {
+            text-align: left;
+        }
+
+        .dresscode-photos {
+            max-width: 480px;
+            position: relative;
+            margin: 0 auto 40px;
+        }
+
+        .dresscode-photo {
+            width: 100%;
+        }
+
+        .button {
+            width: 100%;
+            height: 62px;
+            background-color: #101D0F;
+            border-radius: 8px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            color: #fff;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .signature {
+            font-family: 'Miama Nueva', cursive;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin: 20px 0 5px;
+        }
+
+        @media (max-width: 390px) {
+            .plainText {
+                padding: 0 20px;
+            }
+
+            .program {
+                box-sizing: border-box;
+                max-width: 390px;
+                padding: 0 20px;
+            }
+
+            .program-photo {
+                right: -30px;
+            }
+
+            .dresscode h2 {
+                padding: 0 20px;
+            }
+
+            .button {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .names span:first-child {
+                transform: translate(-38px);
+            }
+
+            .names span:last-child {
+                transform: translate(10px);
+            }
+
+            .arrowEl {
+                display: flex;
+                justify-content: center;
+                transform: translate(50px, -20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logicalBlock">
+        <div class="names"><span>Владимир</span> <span>&</span> <span>Александра</span></div>
+
+        <img src="assets/pairMainPhoto.png" alt="pairMainPhoto" class="photo" />
+
+        <div class="date">02.07.2024</div>
+
+        <div class="arrowEl">
+            <img src="assets/arrow.svg" alt="arrow" />
+            <div>save the date</div>
+        </div>
+    </div>
+
+    <div class="logicalBlock">
+        <h2>Дорогие гости!</h2>
+        <div class="plainText margin0">
+            Скоро в нашей жизни состоится важное событие - наша свадьба. Мы будем счастливы, если вы проведете этот день с нами. Нам будет приятно, если вы станете свидетелями этого события и разделите эти волнующие моменты счастья с нами
+        </div>
+    </div>
+
+    <div class="logicalBlock">
+        <h2>Локация</h2>
+        <div class="location-name margin-bot-20">Фазенда "Николаево"</div>
+        <div class="location-text margin-bot-20">Центральная ул., 32, д. Дрюково</div>
+
+        <div class="offset-photos">
+            <img src="assets/image13.png" alt="photo" class="offset-photo" />
+            <img src="assets/image14.png" alt="photo" class="offset-photo" />
+        </div>
+
+        <div class="plainTime">15:00</div>
+        <div class="location-text margin0">сбор гостей</div>
+    </div>
+
+    <div class="logicalBlock withLeftFlexColumn">
+        <div class="program">
+            <div class="program-items">
+                <h2>Программа</h2>
+                <div class="program-item">
+                    <div class="plainTime">15:30</div>
+                    <div class="plainText">начало церемонии</div>
+                </div>
+                <div class="program-item">
+                    <div class="plainTime">17:00</div>
+                    <div class="plainText">банкет</div>
+                </div>
+            </div>
+            <img src="assets/A&B.svg" class="program-photo"/>
+        </div>
+    </div>
+
+    <div class="logicalBlock withLeftFlexColumn">
+        <div class="dresscode">
+            <h2>Dress code</h2>
+            <div class="plainText margin-bot-60">
+                Мы будем рады, если вы поддержите цветовую гамму нашей свадебной церемонии
+            </div>
+        </div>
+        <div class="dresscode-photos">
+            <picture>
+                <source srcset="assets/dresscodeS.png" media="(max-width: 390px)">
+                <img class="dresscode-photo margin-bot-60" srcset="assets/dresscodeL.png" alt="dresscodeGamma" />
+            </picture>
+            <img class="dresscode-photo" src="assets/image15.png" alt="" />
+        </div>
+    </div>
+
+    <div class="logicalBlock">
+        <h2>Детали</h2>
+        <div class="plainText margin-bot-60">
+            Приятным комплиментом для нас вместо цветов будет бутылочка вашего любимого алкоголя, которую мы откроем на ближайшем совместном празднике
+        </div>
+        <div class="plainText margin-bot-30">
+            Чтобы вам было проще добираться до места празднования, по необходимости мы можем помочь вам добраться на трансфере. Просим вас отметиться в форме ниже о присутствии и трансфере.
+        </div>
+
+        <a href="https://forms.yandex.ru/u/68177713505690f7fb036f29/"><button class="button">Перейти в форму</button></a>
+    </div>
+
+    <div class="logicalBlock"><h2>До встречи!</h2></div>
+
+    <div class="signature">With Love</div>
+    <div class="plainText">ваши Саша и Вова</div>
+</div>
+</body>
+</html>
